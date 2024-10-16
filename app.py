@@ -47,4 +47,6 @@ def delete_todo(todo_id):
     return jsonify({"error": "Todo not found"}), 404
 
 if __name__ == '__main__':
+    # lets see what percent of our todos are complete
+    print(completed_todos / len(todos) * 100)
     app.run(host='0.0.0.0', port=8080)
